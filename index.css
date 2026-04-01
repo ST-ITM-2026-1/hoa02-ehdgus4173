@@ -1,0 +1,390 @@
+/* -------------- */
+/* --- common --- */
+/* -------------- */
+
+
+body {
+    background-color: #ffffff;
+    font-size: larger;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: #ececec;
+    margin: 0 2rem 0 2rem;
+}
+
+.section {
+    margin: 2rem 2rem 0 2rem;
+    background-color: #ececec;
+    padding-bottom: 12rem;
+}
+
+.section-title {
+    border-bottom: 2px solid #003087;
+    padding-bottom: 1rem;
+    text-align: center;
+    width: 50%;
+    margin: 2rem auto;
+    font-size: xx-large;
+}
+
+
+
+
+
+
+
+/* -------------- */
+/* Navigation Bar */
+/* ------------ - */
+
+nav {
+    border-bottom: 2px solid #003087;
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #ffffff;
+}
+
+.nav-bar ul {
+    display: flex;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+.nav-bar ul li {
+    margin: 0 1rem;
+}
+
+.nav-bar ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+/* color from Seoultech logo */
+/* blue: #003087 */
+/* red: #9D2235 */
+
+.nav-bar ul a.active {
+    color: #003087;
+    font-weight: 600;
+    border-bottom: 2px solid #003087;
+}
+
+.nav-bar ul a:hover {
+    color: #9D2235;
+    font-weight: 600;
+    border-bottom: 2px solid #9D2235;
+}
+
+#hamburger-btn {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 1rem;
+    height: 1rem;
+    cursor: pointer;
+}
+
+#hamburger-btn span {
+    width: 100%;
+    height: 2px;
+    background-color: black;
+}
+
+
+@media (max-width: 480px) {
+    #hamburger-btn {
+        display: flex;
+        font-size: 2px;
+    }
+
+    .nav-bar {
+        flex-wrap: wrap;
+        text-align: center;
+    }
+
+    .nav-bar ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        gap: 0.3rem;
+        padding-left: 0;
+    }
+
+    .nav-bar ul.open {
+        display: flex;
+        margin-bottom: 0px;
+    }
+}
+
+
+/* ---------------- */
+/*------ home ------*/
+/* ---------------- */
+
+.about-me {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    margin: 2rem;
+    background-color: #ffffff;
+    padding: 4rem;
+    border-radius: 6px;
+    border: 1px solid #003087;
+}
+
+.profile-img {
+    width: 180px;
+    height: 180px;
+    border-radius: 30%;
+    flex-shrink: 0;
+    border: 0.5px solid #003087;
+    margin-top: -20%;
+}
+
+.about-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 70%;
+
+}
+
+.about-text h3 {
+    margin-bottom: 0rem;
+}
+
+
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+    }
+
+    .about-text {
+        text-align: center;
+    }
+
+    .profile-img {
+        flex-direction: row;
+        margin-top: 0%;
+    }
+}
+
+
+
+
+/* ---------------- */
+/*---- projects --- */
+/* ---------------- */
+
+.project {
+    display: grid;
+}
+
+
+.project-container {
+    display: grid;
+}
+
+
+.project-type {
+    display: grid;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    margin-bottom: 2rem;
+}
+
+.project-type h3 {
+    margin: 1rem;
+    /* padding-top: 1rem; */
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #9D2235;
+    width: 30%;
+    text-align: center;
+}
+
+
+.project-item {
+    background-color: #ffffff;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    border: 1px solid #003087;
+    margin: 1rem;
+}
+
+.project-item h4 {
+    margin-bottom: 0%;
+    padding-left: 1rem;
+}
+
+.project-item p {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-bottom: 2rem;
+}
+
+.project-item:hover {
+    border: 2px solid #9D2235;
+}
+
+
+@media (max-width: 768px) {
+
+    .project-type h3 {
+        display: grid;
+        width: 80%;
+        text-align: center;
+        margin: auto;
+    }
+
+}
+
+
+/* ---------------- */
+/*---- Skills ----- */
+/* ---------------- */
+
+.skill {
+    display: grid;
+}
+
+
+.skill-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    padding: 2rem;
+}
+
+.skill-type {
+    display: grid;
+    background-color: #ffffff;
+    /* margin: auto; */
+    padding: 1rem;
+    border: 1.5px solid #003087;
+    border-radius: 6px;
+}
+
+.skill-type h3 {
+    text-align: center;
+    margin: 0;
+    padding-bottom: 1rem;
+    border-bottom: 1.5px solid #9D2235;
+    height: 1.5rem;
+}
+
+
+.skill-type ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.skill-type:hover {
+    border: 2.5px solid #9D2235;
+}
+
+
+@media(max-width:768px) {
+    .skill-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width:480px) {
+    .skill-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+
+
+/* ---------------- */
+/*---- contact -----*/
+/* ---------------- */
+
+.contact {
+    /* margin collapse ..? */
+    padding-top: 1px;
+}
+
+
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    max-width: 550px;
+    /* 상하 좌우 */
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.contact-type {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.contact-type label {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    border-bottom: 1.5px solid #9D2235;
+    width: 30%;
+    padding-bottom: 0.5rem;
+}
+
+.contact-type input,
+.contact-type textarea {
+    padding: 0.5rem 1rem;
+    border: 1px solid #003087;
+    border-radius: 4px;
+    /* font-size: 0.8rem; */
+    background-color: #ffffff;
+    font-family: inherit;
+}
+
+.contact-type input:focus,
+.contact-type textarea:focus {
+    outline: none;
+    border: 1.5px solid #9D2235;
+}
+
+.contact-type textarea {
+    resize: none;
+    min-height: 10rem;
+}
+
+.contact-container button {
+    cursor: pointer;
+    width: fit-content;
+    border: 1.5px solid #003087;
+    padding: 0.3rem 1rem;
+    border-radius: 4px;
+    /* font-size: 0.8rem; */
+    background-color: #ffffff;
+    font-family: inherit;
+}
+
+
+.contact-container button:hover {
+    /* background-color: #9D2235; */
+    color: #9D2235;
+    border: 2px solid #9D2235;
+}
