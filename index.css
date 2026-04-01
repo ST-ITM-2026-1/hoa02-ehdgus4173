@@ -1,5 +1,5 @@
 body {
-    background-color: #ffffffff;
+    background-color: #ffffff;
 }
 
 #hamburger-btn {
@@ -31,7 +31,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
-    background-color: #ffffffff;
+    background-color: #ffffff;
 }
 
 .nav-bar ul {
@@ -201,7 +201,7 @@ nav {
 
 
 .project-item {
-    background-color: #ffffffff;
+    background-color: #ffffff;
     padding-left: 2rem;
     padding-right: 2rem;
     border: 1px solid #003087;
@@ -298,4 +298,90 @@ nav {
     .skill-container {
         grid-template-columns: repeat(1, 1fr);
     }
+}
+
+
+
+/* ---------------- */
+/*---- contact -----*/
+/* ---------------- */
+
+
+.contact {
+    background-color: #f9f9f7;
+    margin: 2rem;
+    padding-bottom: 2rem;
+}
+
+.contact h2 {
+    border-bottom: 2px solid #003087;
+    padding-bottom: 1rem;
+    text-align: center;
+    width: 50%;
+    margin: auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    max-width: 450px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.contact-type {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.contact-type label {
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-align: center;
+    border-bottom: 1.5px solid #9D2235;
+    width: 30%;
+    padding-bottom: 0.5rem;
+}
+
+.contact-type input,
+.contact-type textarea {
+    padding: 0.5rem 1rem;
+    border: 1px solid #003087;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    background-color: #ffffff;
+    font-family: inherit;
+}
+
+.contact-type input:focus,
+.contact-type textarea:focus {
+    outline: none;
+    border-color: #9D2235;
+}
+
+.contact-type textarea {
+    resize: none;
+    min-height: 10rem;
+}
+
+.contact-container button {
+    cursor: pointer;
+    width: fit-content;
+    border: 1.5px solid #003087;
+    padding: 0.3rem 1rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    background-color: #ffffff;
+    font-family: inherit;
+}
+
+
+.contact-container button:hover {
+    /* background-color: #9D2235; */
+    color: #9D2235;
+    border-color: #9D2235;
 }
