@@ -1,0 +1,46 @@
+/* -------------- */
+/* Navigation Bar */
+/* ------------ - */
+
+nav {
+    border-bottom: 1px solid black;
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #ffffff;
+}
+
+.nav-bar ul {
+    display: flex;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+.nav-bar ul li {
+    margin: 0 1rem;
+}
+
+.nav-bar ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+/* color from Seoultech logo */
+/* blue: #003087 */
+/* red: #9D2235 */
+
+.nav-bar ul a.active {
+    color: #003087;
+    font-weight: 600;
+    border-bottom: 2px solid #003087;
+}
+
+.nav-bar ul a:hover {
+    color: #9D2235;
+    font-weight: 600;
+    border-bottom: 2px solid #9D2235;
+}
