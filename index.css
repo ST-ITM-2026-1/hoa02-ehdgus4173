@@ -1,5 +1,5 @@
 body {
-    background-color: #f9f9f7;
+    background-color: #ffffffff;
 }
 
 #hamburger-btn {
@@ -31,7 +31,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
-    background-color: #f9f9f7;
+    background-color: #ffffffff;
 }
 
 .nav-bar ul {
@@ -101,8 +101,7 @@ nav {
     align-items: center;
     flex-direction: column;
     margin: 2rem;
-    background-color: #ffffff;
-
+    background-color: #f9f9f7;
 }
 
 .about-me h2 {
@@ -118,7 +117,7 @@ nav {
     align-items: center;
     gap: 3rem;
     margin: 2rem;
-    background-color: #ffffff;
+    background-color: #f9f9f7;
 }
 
 .profile-img {
@@ -133,7 +132,11 @@ nav {
 .about-text {
     display: flex;
     flex-direction: column;
-    gap: 0.1rem;
+    gap: 0.5rem;
+}
+
+.about-text h3 {
+    margin-bottom: 0rem;
 }
 
 
@@ -150,4 +153,80 @@ nav {
         flex-direction: row;
         margin-top: 0%;
     }
+}
+
+
+
+
+/* ---------------- */
+/*---- projects --- */
+/* ---------------- */
+
+.project {
+    background-color: #f9f9f7;
+    display: grid;
+    margin: 2rem;
+}
+
+.project h2 {
+    border-bottom: 2px solid #003087;
+    padding-bottom: 1rem;
+    text-align: center;
+    width: 50%;
+    margin: auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.project-container {
+    display: grid;
+}
+
+
+.project-type {
+    display: grid;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    margin-bottom: 2rem;
+}
+
+.project-type h3 {
+    margin: 1rem;
+    /* padding-top: 1rem; */
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #9D2235;
+    width: 30%;
+    text-align: center;
+}
+
+
+.project-item {
+    background-color: #ffffffff;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    border: 1px solid #003087;
+    margin: 1rem;
+}
+
+.project-item h4 {
+    margin-bottom: 0%;
+    padding-left: 1rem;
+}
+
+.project-item p {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-bottom: 2rem;
+}
+
+
+@media (max-width: 768px) {
+
+    .project-type h3 {
+        display: grid;
+        width: 80%;
+        text-align: center;
+        margin: auto;
+    }
+
 }
