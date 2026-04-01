@@ -230,3 +230,72 @@ nav {
     }
 
 }
+
+
+/* ---------------- */
+/*---- Skills ----- */
+/* ---------------- */
+
+.skill {
+    display: grid;
+    margin: 2rem;
+    background-color: #f9f9f7;
+}
+
+.skill h2 {
+    border-bottom: 2px solid #003087;
+    padding-bottom: 1rem;
+    text-align: center;
+    width: 50%;
+    margin: auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.skill-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    padding: 2rem;
+}
+
+.skill-type {
+    display: grid;
+    /* margin: auto; */
+    padding: 1rem;
+    border: 1.5px solid #9D2235;
+    border-radius: 3%;
+}
+
+.skill-type h3 {
+    text-align: center;
+    margin: 0;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #003087;
+    height: 1.5rem;
+}
+
+
+.skill-type ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.skill-type:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+
+@media(max-width:768px) {
+    .skill-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width:480px) {
+    .skill-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
