@@ -2,20 +2,22 @@
 /* --- common --- */
 /* -------------- */
 
+
 body {
     background-color: #ffffff;
+    font-size: larger;
 }
 
 footer {
     text-align: center;
     padding: 2rem;
-    background-color: #f9f9f7;
-    margin: 0 2rem 2rem 2rem;
+    background-color: #ececec;
+    margin: 0 2rem 0 2rem;
 }
 
 .section {
     margin: 2rem 2rem 0 2rem;
-    background-color: #f9f9f7;
+    background-color: #ececec;
     padding-bottom: 12rem;
 }
 
@@ -25,6 +27,7 @@ footer {
     text-align: center;
     width: 50%;
     margin: 2rem auto;
+    font-size: xx-large;
 }
 
 
@@ -38,7 +41,7 @@ footer {
 /* ------------ - */
 
 nav {
-    border-bottom: 1px solid black;
+    border-bottom: 2px solid #003087;
 }
 
 .nav-bar {
@@ -139,6 +142,10 @@ nav {
     align-items: center;
     gap: 3rem;
     margin: 2rem;
+    background-color: #ffffff;
+    padding: 4rem;
+    border-radius: 6px;
+    border: 1px solid #003087;
 }
 
 .profile-img {
@@ -146,7 +153,7 @@ nav {
     height: 180px;
     border-radius: 30%;
     flex-shrink: 0;
-    border: 2px solid #003087;
+    border: 0.5px solid #003087;
     margin-top: -20%;
 }
 
@@ -154,6 +161,8 @@ nav {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+    width: 70%;
+
 }
 
 .about-text h3 {
@@ -264,9 +273,10 @@ nav {
 
 .skill-type {
     display: grid;
+    background-color: #ffffff;
     /* margin: auto; */
     padding: 1rem;
-    border: 1.5px solid #9D2235;
+    border: 1.5px solid #003087;
     border-radius: 6px;
 }
 
@@ -274,7 +284,7 @@ nav {
     text-align: center;
     margin: 0;
     padding-bottom: 1rem;
-    border-bottom: 1px solid #003087;
+    border-bottom: 1.5px solid #9D2235;
     height: 1.5rem;
 }
 
@@ -287,7 +297,7 @@ nav {
 }
 
 .skill-type:hover {
-    border: 2px solid #003087;
+    border: 2.5px solid #9D2235;
 }
 
 
@@ -309,7 +319,6 @@ nav {
 /*---- contact -----*/
 /* ---------------- */
 
-
 .contact {
     /* margin collapse ..? */
     padding-top: 1px;
@@ -320,7 +329,7 @@ nav {
     display: flex;
     flex-direction: column;
     gap: 1.2rem;
-    max-width: 450px;
+    max-width: 550px;
     /* 상하 좌우 */
     margin: 0 auto;
     padding: 0 2rem;
@@ -333,7 +342,7 @@ nav {
 }
 
 .contact-type label {
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     font-weight: bold;
     text-align: center;
     border-bottom: 1.5px solid #9D2235;
@@ -346,7 +355,7 @@ nav {
     padding: 0.5rem 1rem;
     border: 1px solid #003087;
     border-radius: 4px;
-    font-size: 0.8rem;
+    /* font-size: 0.8rem; */
     background-color: #ffffff;
     font-family: inherit;
 }
@@ -368,7 +377,7 @@ nav {
     border: 1.5px solid #003087;
     padding: 0.3rem 1rem;
     border-radius: 4px;
-    font-size: 0.8rem;
+    /* font-size: 0.8rem; */
     background-color: #ffffff;
     font-family: inherit;
 }
