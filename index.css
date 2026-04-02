@@ -30,8 +30,11 @@ footer {
     font-size: xx-large;
 }
 
-
-
+@media(max-width: 480px) {
+    .section {
+        font-size: small;
+    }
+}
 
 
 
@@ -123,6 +126,10 @@ nav {
         display: flex;
         margin-bottom: 0px;
     }
+
+    .section-title {
+        width: 80%;
+    }
 }
 
 
@@ -141,7 +148,7 @@ nav {
     display: flex;
     align-items: center;
     gap: 3rem;
-    margin: 2rem;
+    margin: 0 2rem;
     background-color: #ffffff;
     padding: 4rem;
     border-radius: 6px;
@@ -182,6 +189,17 @@ nav {
     .profile-img {
         flex-direction: row;
         margin-top: 0%;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-container {
+        flex-direction: column;
+        margin: auto;
+    }
+
+    .profile-img {
+        margin-top: 0;
     }
 }
 
