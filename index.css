@@ -1,28 +1,44 @@
+:root {
+    --color-primary: #003087;
+    --color-accent: #9D2235;
+    --color-bg-body: #ffffff;
+    --color-bg-section: #ececec;
+
+    --border-radius-sm: 4px;
+    --border-radius-md: 6px;
+
+    --border-thin: 1px;
+    --border-mid: 1.5px;
+    --border-thick: 2px;
+}
+
 /* -------------- */
 /* --- common --- */
 /* -------------- */
 
 
 body {
-    background-color: #ffffff;
+    background-color: var(--color-bg-body);
     font-size: larger;
 }
 
 footer {
     text-align: center;
     padding: 2rem;
-    background-color: #ececec;
+    background-color: var(--color-bg-section);
     margin: 0 2rem 0 2rem;
 }
 
 .section {
     margin: 2rem 2rem 0 2rem;
-    background-color: #ececec;
+    background-color: var(--color-bg-section);
     padding-bottom: 12rem;
+    /* margin collapse prevention for all four pages */
+    padding-top: 1px;
 }
 
 .section-title {
-    border-bottom: 2px solid #003087;
+    border-bottom: var(--border-thick) solid var(--color-primary);
     padding-bottom: 1rem;
     text-align: center;
     width: 50%;
@@ -44,7 +60,7 @@ footer {
 /* ------------ - */
 
 nav {
-    border-bottom: 2px solid #003087;
+    border-bottom: var(--border-thick) solid var(--color-primary);
 }
 
 .nav-bar {
@@ -52,7 +68,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
-    background-color: #ffffff;
+    background-color: var(--color-bg-body);
 }
 
 .nav-bar ul {
@@ -75,15 +91,15 @@ nav {
 /* red: #9D2235 */
 
 .nav-bar ul a.active {
-    color: #003087;
+    color: var(--color-primary);
     font-weight: 600;
-    border-bottom: 2px solid #003087;
+    border-bottom: var(--border-thick) solid var(--color-primary);
 }
 
 .nav-bar ul a:hover {
-    color: #9D2235;
+    color: var(--color-accent);
     font-weight: 600;
-    border-bottom: 2px solid #9D2235;
+    border-bottom: var(--border-thick) solid var(--color-accent);
 }
 
 #hamburger-btn {
@@ -149,10 +165,10 @@ nav {
     align-items: center;
     gap: 3rem;
     margin: 0 2rem;
-    background-color: #ffffff;
+    background-color: var(--color-bg-body);
     padding: 4rem;
-    border-radius: 6px;
-    border: 1px solid #003087;
+    border-radius: var(--border-radius-md);
+    border: var(--border-thin) solid var(--color-primary);
 }
 
 .profile-img {
@@ -160,7 +176,7 @@ nav {
     height: 180px;
     border-radius: 30%;
     flex-shrink: 0;
-    border: 0.5px solid #003087;
+    border: 0.5px solid var(--color-primary);
     margin-top: -20%;
 }
 
@@ -210,16 +226,6 @@ nav {
 /*---- projects --- */
 /* ---------------- */
 
-.project {
-    display: grid;
-}
-
-
-.project-container {
-    display: grid;
-}
-
-
 .project-type {
     display: grid;
     padding-right: 2rem;
@@ -231,17 +237,17 @@ nav {
     margin: 1rem;
     /* padding-top: 1rem; */
     padding-bottom: 1rem;
-    border-bottom: 2px solid #9D2235;
+    border-bottom: var(--border-thick) solid var(--color-accent);
     width: 30%;
     text-align: center;
 }
 
 
 .project-item {
-    background-color: #ffffff;
+    background-color: var(--color-bg-body);
     padding-left: 2rem;
     padding-right: 2rem;
-    border: 1px solid #003087;
+    border: var(--border-thin) solid var(--color-primary);
     margin: 1rem;
 }
 
@@ -257,7 +263,7 @@ nav {
 }
 
 .project-item:hover {
-    border: 2px solid #9D2235;
+    border: var(--border-thick) solid var(--color-accent);
 }
 
 
@@ -277,11 +283,6 @@ nav {
 /*---- Skills ----- */
 /* ---------------- */
 
-.skill {
-    display: grid;
-}
-
-
 .skill-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -291,18 +292,18 @@ nav {
 
 .skill-type {
     display: grid;
-    background-color: #ffffff;
+    background-color: var(--color-bg-body);
     /* margin: auto; */
     padding: 1rem;
-    border: 1.5px solid #003087;
-    border-radius: 6px;
+    border: var(--border-mid) solid var(--color-primary);
+    border-radius: var(--border-radius-md);
 }
 
 .skill-type h3 {
     text-align: center;
     margin: 0;
     padding-bottom: 1rem;
-    border-bottom: 1.5px solid #9D2235;
+    border-bottom: var(--border-mid) solid var(--color-accent);
     height: 1.5rem;
 }
 
@@ -315,7 +316,7 @@ nav {
 }
 
 .skill-type:hover {
-    border: 2.5px solid #9D2235;
+    border: var(--border-thick) solid var(--color-accent);
 }
 
 
@@ -336,11 +337,6 @@ nav {
 /* ---------------- */
 /*---- contact -----*/
 /* ---------------- */
-
-.contact {
-    /* margin collapse ..? */
-    padding-top: 1px;
-}
 
 
 .contact-container {
@@ -363,7 +359,7 @@ nav {
     font-size: 1.5rem;
     font-weight: bold;
     text-align: center;
-    border-bottom: 1.5px solid #9D2235;
+    border-bottom: var(--border-mid) solid var(--color-accent);
     width: 30%;
     padding-bottom: 0.5rem;
 }
@@ -371,17 +367,17 @@ nav {
 .contact-type input,
 .contact-type textarea {
     padding: 0.5rem 1rem;
-    border: 1px solid #003087;
-    border-radius: 4px;
+    border: var(--border-thin) solid var(--color-primary);
+    border-radius: var(--border-radius-sm);
     /* font-size: 0.8rem; */
-    background-color: #ffffff;
+    background-color: var(--color-bg-body);
     font-family: inherit;
 }
 
 .contact-type input:focus,
 .contact-type textarea:focus {
     outline: none;
-    border: 1.5px solid #9D2235;
+    border: var(--border-mid) solid var(--color-accent);
 }
 
 .contact-type textarea {
@@ -392,17 +388,17 @@ nav {
 .contact-container button {
     cursor: pointer;
     width: fit-content;
-    border: 1.5px solid #003087;
+    border: var(--border-mid) solid var(--color-primary);
     padding: 0.3rem 1rem;
-    border-radius: 4px;
+    border-radius: var(--border-radius-sm);
     /* font-size: 0.8rem; */
-    background-color: #ffffff;
+    background-color: var(--color-bg-body);
     font-family: inherit;
 }
 
 
 .contact-container button:hover {
     /* background-color: #9D2235; */
-    color: #9D2235;
-    border: 2px solid #9D2235;
+    color: var(--color-accent);
+    border: var(--border-thick) solid var(--color-accent);
 }
