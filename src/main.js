@@ -54,11 +54,15 @@ document.addEventListener('DOMContentLoaded', () => {
     themeToggleBtn.addEventListener("click", () => {
         document.documentElement.classList.toggle("dark");
         const currentDark = document.documentElement.classList.contains("dark");
+
         if (currentDark) {
             themeToggleBtn.textContent = "Light";
+            localStorage.setItem("theme", "dark");
         } else {
             themeToggleBtn.textContent = "Dark";
+            localStorage.setItem("theme", "light");
         }
+
 
     });
 

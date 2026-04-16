@@ -437,10 +437,6 @@ nav {
     margin: 0;
 }
 
-.project-item:hover {
-    border: var(--border-thick) solid var(--color-ST-red);
-}
-
 
 .filter-btns {
     display: flex;
@@ -487,50 +483,60 @@ nav {
 
 .skill-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 1.5rem;
-    padding: 2rem;
+    padding: 1rem 2rem 2rem;
 }
 
 .skill-type {
-    display: grid;
-    background-color: var(--color-bg-body);
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-bg-card);
     /* margin: auto; */
-    padding: 1rem;
-    border: var(--border-mid) solid var(--color-ST-blue);
-    border-radius: var(--border-radius-md);
+    padding: 1.2rem;
+    border: var(--border-thin) solid var(--color-border-card);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-card);
 }
 
+.skill-type:hover {
+    border-color: var(--color-border-card-hover);
+    box-shadow: var(--shadow-card-hover);
+}
+
+
 .skill-type h3 {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
     text-align: center;
     margin: 0;
-    padding-bottom: 1rem;
+    padding-bottom: 0.75rem;
     border-bottom: var(--border-mid) solid var(--color-ST-red);
-    height: 1.5rem;
+    color: var(--color-text-main);
+    min-height: 3rem;
 }
 
 
 .skill-type ul {
     list-style: none;
     padding: 0;
-    margin-top: 1rem;
+    margin-top: 0.75rem;
     text-align: center;
-}
-
-.skill-type:hover {
-    border: var(--border-thick) solid var(--color-ST-red);
+    color: var(--color-text-sub);
+    line-height: 2;
 }
 
 
 @media(max-width:768px) {
     .skill-container {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
 
 @media(max-width:480px) {
     .skill-container {
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: repeat(1, minmax(0, 1fr));
     }
 }
 
@@ -558,22 +564,24 @@ nav {
 }
 
 .contact-type label {
-    font-size: 1.5rem;
-    font-weight: bold;
+    font-size: 1rem;
+    font-weight: 600;
     text-align: center;
     border-bottom: var(--border-mid) solid var(--color-ST-red);
     width: 30%;
-    padding-bottom: 0.5rem;
+    color: var(--color-text-main);
 }
 
 .contact-type input,
 .contact-type textarea {
     padding: 0.5rem 1rem;
-    border: var(--border-thin) solid var(--color-ST-blue);
+    border: var(--border-thin) solid var(--color-border-card);
     border-radius: var(--border-radius-sm);
     /* font-size: 0.8rem; */
-    background-color: var(--color-bg-body);
+    background-color: var(--color-bg-card);
     font-family: inherit;
+    font-size: 0.9rem;
+    color: var(--color-text-main);
 }
 
 .contact-type input:focus,
@@ -591,16 +599,17 @@ nav {
     cursor: pointer;
     width: fit-content;
     border: var(--border-mid) solid var(--color-ST-blue);
-    padding: 0.3rem 1rem;
+    padding: 0.4rem 1.1rem;
     border-radius: var(--border-radius-sm);
-    /* font-size: 0.8rem; */
-    background-color: var(--color-bg-body);
+    font-size: 0.8rem;
+    background-color: var(--color-bg-card);
     font-family: inherit;
+    color: var(--color-ST-blue);
 }
 
 
 .contact-container button:hover {
-    /* background-color: #9D2235; */
-    color: var(--color-ST-red);
-    border: var(--border-thick) solid var(--color-ST-red);
+    background-color: var(--color-ST-blue);
+    color: var(--color-bg-card);
+    border: var(--border-thin) solid var(--color-ST-red);
 }
