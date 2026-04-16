@@ -111,7 +111,7 @@ footer a:hover {
     margin: 2rem auto 1.5rem;
     font-size: 2rem;
     font-weight: 700;
-    border-bottom: var(--border-thick) solid var(--color-ST-blue);
+    border-bottom: var(--border-mid) solid var(--color-ST-red);
     color: var(--color-ST-blue);
 }
 
@@ -277,6 +277,12 @@ nav {
     box-shadow: var(--shadow-card-hover);
 }
 
+.dark .about-container:hover {
+    border-color: var(--color-ST-red);
+    box-shadow: var(--shadow-card-hover);
+}
+
+
 .profile-img {
     width: 180px;
     height: 180px;
@@ -377,40 +383,52 @@ nav {
 /*---- projects --- */
 /* ---------------- */
 
-.project-type {
+.project-container {
     display: grid;
-    padding-right: 2rem;
-    padding-left: 2rem;
-    margin-bottom: 2rem;
-}
-
-.project-type h3 {
-    margin: 1rem;
-    /* padding-top: 1rem; */
-    padding-bottom: 1rem;
-    border-bottom: var(--border-thick) solid var(--color-ST-red);
-    width: 30%;
-    text-align: center;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding: 1rem 2rem 2rem;
+    gap: 1.5rem;
 }
 
 
 .project-item {
-    background-color: var(--color-bg-body);
-    padding-left: 2rem;
-    padding-right: 2rem;
-    border: var(--border-thin) solid var(--color-ST-blue);
-    margin: 1rem;
+    background-color: var(--color-bg-card);
+    padding: 1.5rem 1.5rem;
+    border: var(--border-thin) solid var(--color-border-card);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-card);
+}
+
+.project-item:hover {
+    border-color: var(--color-border-card-hover);
+    box-shadow: var(--shadow-card-hover);
+}
+
+.project-category {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--color-ST-red);
+    margin-bottom: 0.5rem;
+}
+
+.dark .project-category {
+    color: var(--color-text-muted);
 }
 
 .project-item h4 {
-    margin-bottom: 0%;
-    padding-left: 1rem;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--color-text-main);
+    margin: 0 0 0.4rem;
 }
 
+
 .project-item p {
-    padding-left: 2rem;
-    padding-right: 2rem;
-    margin-bottom: 2rem;
+    font-size: 0.9rem;
+    color: var(--color-text-sub);
+    line-height: 1.5;
+    margin: 0;
 }
 
 .project-item:hover {
@@ -420,11 +438,8 @@ nav {
 
 @media (max-width: 768px) {
 
-    .project-type h3 {
-        display: grid;
-        width: 80%;
-        text-align: center;
-        margin: auto;
+    .project-container {
+        grid-template-columns: minmax(0, 1fr);
     }
 
 }
