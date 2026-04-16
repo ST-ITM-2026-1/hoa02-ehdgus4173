@@ -284,7 +284,7 @@ nav {
 }
 
 .dark .about-container:hover {
-    border-color: var(--color-ST-red);
+    border-color: var(--color-ST-blue);
     box-shadow: var(--shadow-card-hover);
 }
 
@@ -587,8 +587,15 @@ nav {
 .contact-type input:focus,
 .contact-type textarea:focus {
     outline: none;
-    border: var(--border-mid) solid var(--color-ST-red);
+    border: var(--border-thin) solid var(--color-ST-red);
 }
+
+.dark .contact-type input:focus,
+.contact-type textarea:focus {
+    outline: none;
+    border: var(--border-thin) solid var(--color-ST-blue);
+}
+
 
 .contact-type textarea {
     resize: none;
@@ -618,3 +625,198 @@ nav {
 /* ---------------- */
 /*---- Github -----*/
 /* ---------------- */
+
+
+/*---- Profile -----*/
+
+.profile {
+    padding: 1px 0 5rem;
+    background-color: var(--color-bg-body);
+    padding-top: 1px;
+}
+
+
+.github-profile-container {
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.profile-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+    background-color: var(--color-bg-card);
+    border: var(--border-thin) solid var(--color-border-card);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-card);
+}
+
+.profile-card:hover {
+    border: var(--border-thin) solid var(--color-ST-blue);
+    box-shadow: var(--shadow-card-hover);
+}
+
+.profile-card img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    /* keep img ratio */
+    object-fit: cover;
+    border: var(--border-thin) solid var(--color-border-card);
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.profile-info h2 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--color-text-main);
+    margin: 0;
+}
+
+.profile-info p {
+    font-size: 0.9rem;
+    color: var(--color-text-sub);
+    margin: 0;
+}
+
+.profile-stats {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 0.4rem;
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+}
+
+.profile-stats b {
+    color: var(--color-ST-blue);
+    font-weight: 700;
+}
+
+@media(max-width: 768px) {
+    .profile-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.5rem;
+    }
+
+    .profile-card img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .profile-stats {
+        justify-content: center;
+    }
+}
+
+
+
+@media (max-width: 480px) {
+    .profile-card {
+        padding: 1rem;
+    }
+
+    .profile-card img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .profile-stats {
+        flex-direction: column;
+        gap: 0.3rem;
+        align-items: center;
+    }
+}
+
+
+/*---- Repository -----*/
+
+.github-repository-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+    padding: 1rem 2rem 2rem;
+}
+
+.repo-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    background-color: var(--color-bg-card);
+    padding: 1.5rem;
+    border: var(--border-thin) solid var(--color-border-card);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-card);
+}
+
+.repo-card:hover {
+    border: var(--border-thin) solid var(--color-ST-red);
+    box-shadow: var(--shadow-card-hover);
+}
+
+.dark .repo-card:hover {
+    border: var(--border-thin) solid var(--color-ST-blue);
+}
+
+.repo-name {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--color-text-main);
+    margin: 0;
+}
+
+.repo-description {
+    font-size: 0.9rem;
+    color: var(--color-text-sub);
+    line-height: 1.5;
+    margin: 0;
+    flex-grow: 1;
+}
+
+.repo-info {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+    flex-wrap: wrap;
+}
+
+.repo-language {
+    font-weight: 700;
+    color: var(--color-ST-blue);
+}
+
+.repo-url {
+    margin-left: auto;
+    color: var(--color-ST-red);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.8rem;
+}
+
+.repo-url:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .github-repository-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .github-repository-container {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+}
