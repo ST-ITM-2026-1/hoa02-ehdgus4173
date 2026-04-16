@@ -1,103 +1,86 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/qYUNUPgf)
-# HOA01
-Hands-on Assignments for ITM 519  
+[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/oZexKI4n)
+# HOA02 
 
-(Web Programming) 
+## Enhancing Your Portfolio with JavaScript
 
-Portfolio Builder Homework Series Overview 
-
-Objective 
-
- 
-
-This series of three individual homework assignments will guide students through the process of building a fully functional portfolio website using HTML, CSS, JavaScript, Node.js and relational databases. Each homework builds on the previous one, reinforcing concepts progressively. The homework will be managed and submitted via GitHub Classroom, ensuring students practice version control and web deployment. 
-
- 
-
-Homework Breakdown (Total: 10 Points) 
-
- 
-
-HOA01: Static HTML & CSS Portfolio Structure (5 Points) 
-
-Students will create a responsive static portfolio with multiple sections using HTML and CSS. 
+JAVASCRIPT INTERACTIVITY &amp; DYNAMIC CONTENT
 
 
-Ensuring Academic Integrity & Understanding 
+## Objective
 
-To verify that students are not excessively relying on AI tools, after each submission, a handwritten assessment will be carried out during the next class time, containing key questions about the implementation process, requiring students to explain their own code and questions where students should reflect on challenges faced during the implementation of the homework and how they resolved them. 
+Extend your static portfolio (from Assignment 1) by integrating interactive and dynamic features using JavaScript. This assignment builds on your foundational work in HTML and CSS while incorporating JavaScript fundamentals, DOM manipulation and Asynchronous JavaScript.
 
- 
+---
 
-Each assessment will contain six questions, if four or more questions are incorrectly answered, the assessment will be considered as “Failed”, thus the student failed to demonstrate understanding of their own homework. A penalty of 80% will be applied to the total grade of that homework. 
+## Requirements
 
- 
+### 1. Theme Switcher
 
-Feedback will be provided during class time and office hours throughout the semester. You are encouraged to seek help and clarification during these sessions. 
+- Create a JavaScript function that toggles between two themes (for example, dark/light, pastel/contrast, etc.). You can be creative with the names.
+- Provide a user interface control (e.g., a toggle button) that triggers the theme switch.
+- Use DOM manipulation to add or remove CSS classes or modify CSS variables dynamically.
 
- 
+---
 
- 
+### 2. Project Filtering
 
- 
+- On the Projects page, add functionality to filter projects by category or keyword.
+- Implement the necessary changes to distinguish categories on your projects.
+- Use JavaScript to dynamically show/hide projects as per the selected filter.
 
- 
+---
 
-HOA01: Static HTML & CSS Portfolio Structure  
+### 3. GitHub Profile and Repositories Page
 
- 
+- Create a new page (e.g., labeled “GitHub Stats” or “My GitHub”) that displays your public GitHub profile information and a list of your public repositories.
+- Add this page to your navigation bar.
 
-Building a Personal Portfolio with HTML & CSS (5 Points) 
+#### Public Profile Data
+- Using the GitHub REST API endpoint:  
+  https://api.github.com/users/<your_username>
+- Fetch and display key details such as:
+  - Avatar (profile picture)
+  - Name
+  - Bio
+  - Number of public repositories
+  - Followers
+  - Following
 
- 
+#### Repository Cards
+- Use the endpoint:  
+  https://api.github.com/users/<your_username>/repos
+- Dynamically create and display repository cards that include:
+  - Repository name
+  - Description
+  - Primary language
+  - Star count
+  - Forks
+  - Link to the repository
 
-Objective: 
+- Handle asynchronous data retrieval with proper error handling.
+- Ensure the design is engaging and integrates smoothly with your overall portfolio style.
+- Use DOM manipulation to dynamically inject the fetched information into your page layout.
 
- 
-Create a responsive static portfolio website that showcases your skills, projects, and contact information. 
+---
 
- 
+### 4. GitHub Integration & Project Organization
 
-Requirements: 
+- Start this assignment from the final commit of Assignment 1.
 
- 
+1. Accept the Assignment 2 repository from GitHub Classroom and clone it locally.  
+2. Copy the files from your final commit in Assignment 1 into the Assignment 2 repository.  
+3. Create an initial commit with a clear message:  
+   `"Initial commit: Base files carried over from Assignment 1 for Assignment 2 enhancements"`  
+4. Continue development by adding your enhancements:
+   - Theme switcher  
+   - Project filtering  
+   - GitHub Profile & Repositories page  
+5. Use branches as needed for organizing different features and maintain a good commit history.  
+6. Deploy your final project on GitHub Pages and update your repository’s README with the deployed URL.  
 
-Develop separate HTML pages for each section: 
+---
 
-Home: Introduction & short bio. 
+## Deliverables
 
-Projects: List of past projects (with placeholders or real project info). 
-
-Skills: List your technical skills. 
-
-Contact: Basic contact form (nonfunctional at this stage, but with labeled input fields, proper placeholder text, and a visually appealing layout). 
-
-Implement a navigation bar to link the pages. 
-
-Ensure the website is fully responsive using CSS Flexbox or Grid and media queries. 
-
-The website should display correctly on devices with: small and large smartphones (0-480px), tablets and larger smartphones (481-768), desktops  and large screens (769px+) 
-
-Restrictions: Do not use CSS frameworks like Bootstrap or Tailwind. 
-
-Use semantic HTML for proper structure. 
-
-Deploy the project using GitHub Pages. 
-
-Follow a clear file structure (refer to this guide). 
-
- 
-
- 
-
-Deliverables: 
-
- 
-
-A GitHub repository (via GitHub Classroom) containing the complete project. 
-
-The repository should demonstrate progress in your work through a series of progressive commits. 
-
-A live deployed version of your webpage via GitHub Pages. 
-
- 
+- A GitHub repository (via GitHub Classroom) with JavaScript enhancements.  
+- Updated live version of your portfolio on GitHub Pages.
