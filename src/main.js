@@ -12,13 +12,18 @@ document.addEventListener('DOMContentLoaded', () => {
         <li><a href="skill.html">Skills</a></li>
         <li><a href="contact.html">Contact</a></li>
     </ul>
+    <div class="nav-actions">
+        <button id="theme-toggle">Dark</button>
+    <div>
+    
 </nav>`;
     document.querySelector('header').innerHTML = navHTML;
 
     const footerHTML = `
 <p>Email: ehdgus4173@gmail.com</p>
-<p>&copy; 2026 Donghyun Lim</p>
-<p>GitHub: <a href="https://github.com/ehdgus4173" target="_blank">ehdgus4173</a></p>`;
+<span>&middot;</span>
+<p>GitHub: <a href="https://github.com/ehdgus4173" target="_blank">github.com/ehdgus4173</a></p>
+<span style="display:block;width:100%;text-align:center;margin-top:0.4rem;font-size:0.78rem;opacity:0.5;">&copy; 2026 Donghyun Lim</span>`;
     document.querySelector('footer').innerHTML = footerHTML;
 
     // Add active class to current page link
@@ -37,5 +42,27 @@ document.addEventListener('DOMContentLoaded', () => {
     hamburgerBtn.addEventListener('click', () => {
         navMenu.classList.toggle('open');
     });
+
+
+    // Theme button
+    const themeToggleBtn = document.getElementById("theme-toggle");
+
+    const isDark = document.documentElement.classList.contains("dark");
+    if (isDark) {
+        themeToggleBtn.textContent = "Light";
+    }
+
+    themeToggleBtn.addEventListener("click", () => {
+        document.documentElement.classList.toggle("dark");
+        const currentDark = document.documentElement.classList.contains("dark");
+        if (currentDark) {
+            themeToggleBtn.textContent = "Light";
+        } else {
+            themeToggleBtn.textContent = "Dark";
+        }
+
+    });
+
+
 
 });
