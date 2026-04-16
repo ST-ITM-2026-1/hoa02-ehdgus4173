@@ -229,6 +229,11 @@ nav {
         flex-wrap: wrap;
     }
 
+    .nav-actions {
+        margin-left: auto;
+        order: 1;
+    }
+
     .nav-bar ul {
         display: none;
         flex-direction: column;
@@ -236,6 +241,7 @@ nav {
         gap: 0.3rem;
         padding: 0;
         text-align: center;
+        order: 2;
     }
 
     .nav-bar ul.open {
@@ -433,6 +439,36 @@ nav {
 
 .project-item:hover {
     border: var(--border-thick) solid var(--color-ST-red);
+}
+
+
+.filter-btns {
+    display: flex;
+    gap: 0.5rem;
+    padding: 0 2rem 1rem;
+}
+
+.filter-btn {
+    cursor: pointer;
+    background: none;
+    border: var(--border-thin) solid var(--color-ST-blue);
+    border-radius: var(--border-radius-sm);
+    padding: 0.25rem 0.9rem;
+    font-size: 0.8rem;
+    color: var(--color-text-nav-link);
+    font-family: inherit;
+}
+
+.filter-btn:hover {
+    background-color: var(--color-ST-blue);
+    color: var(--color-bg-nav);
+}
+
+.filter-btn.active {
+    background-color: var(--color-ST-blue);
+    color: var(--color-bg-nav);
+    border-color: var(--color-ST-blue);
+    font-weight: 600;
 }
 
 

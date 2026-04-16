@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', () => {
     <a href="home.html" id="logo">
         <img src="../assets/logo.png" alt="ST_logo" height="45">
     </a>
-    <div id="hamburger-btn"><span></span><span></span><span></span></div>
     <ul>
         <li><a href="home.html">Home</a></li>
         <li><a href="projects.html">Projects</a></li>
@@ -14,8 +13,8 @@ document.addEventListener('DOMContentLoaded', () => {
     </ul>
     <div class="nav-actions">
         <button id="theme-toggle">Dark</button>
-    <div>
-    
+        <div id="hamburger-btn"><span></span><span></span><span></span></div>
+    </div>
 </nav>`;
     document.querySelector('header').innerHTML = navHTML;
 
@@ -61,6 +60,33 @@ document.addEventListener('DOMContentLoaded', () => {
             themeToggleBtn.textContent = "Dark";
         }
 
+    });
+
+
+    // filter buttons for Project page
+
+    const filterBtns = document.querySelectorAll(".filter-btn");
+    const items = document.querySelectorAll(".project-item");
+
+    filterBtns.forEach(btn => {
+        btn.addEventListener("click", () => {
+
+            filterBtns.forEach(b => b.classList.remove("active"));
+            btn.classList.add("active");
+
+            const filter = btn.dataset.filter;
+            // console.log(filter);
+
+            items.forEach(item => {
+                if (filter === "all" || item.dataset.category === filter) {
+                    item.style.display = "block";
+                    // console.log(item.querySelector("h4"));
+                } else {
+                    item.style.display = "none";
+                }
+            });
+
+        })
     });
 
 
