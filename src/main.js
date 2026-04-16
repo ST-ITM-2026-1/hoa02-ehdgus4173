@@ -1,29 +1,35 @@
-document.addEventListener('DOMContentLoaded', () => {
 
+
+document.addEventListener('DOMContentLoaded', init);
+
+
+function init() {
     const navHTML = `
-<nav class="nav-bar">
-    <a href="home.html" id="logo">
-        <img src="../assets/logo.png" alt="ST_logo" height="45">
-    </a>
-    <ul>
-        <li><a href="home.html">Home</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="skill.html">Skills</a></li>
-        <li><a href="contact.html">Contact</a></li>
-    </ul>
-    <div class="nav-actions">
-        <button id="theme-toggle">Dark</button>
-        <div id="hamburger-btn"><span></span><span></span><span></span></div>
-    </div>
-</nav>`;
+        <nav class="nav-bar">
+            <a href="home.html" id="logo">
+                <img src="../assets/logo.png" alt="ST_logo" height="45">
+            </a>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="skill.html">Skills</a></li>
+                <li><a href="github.html">Github</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button id="theme-toggle">Dark</button>
+                <div id="hamburger-btn"><span></span><span></span><span></span></div>
+            </div>
+        </nav>`;
     document.querySelector('header').innerHTML = navHTML;
 
     const footerHTML = `
-<p>Email: ehdgus4173@gmail.com</p>
-<span>&middot;</span>
-<p>GitHub: <a href="https://github.com/ehdgus4173" target="_blank">github.com/ehdgus4173</a></p>
-<span style="display:block;width:100%;text-align:center;margin-top:0.4rem;font-size:0.78rem;opacity:0.5;">&copy; 2026 Donghyun Lim</span>`;
+        <p>Email: ehdgus4173@gmail.com</p>
+        <span>&middot;</span>
+        <p>GitHub: <a href="https://github.com/ehdgus4173" target="_blank">github.com/ehdgus4173</a></p>
+        <span style="display:block;width:100%;text-align:center;margin-top:0.4rem;font-size:0.78rem;opacity:0.5;">&copy; 2026 Donghyun Lim</span>`;
     document.querySelector('footer').innerHTML = footerHTML;
+
 
     // Add active class to current page link
     const links = document.querySelectorAll('.nav-bar ul a');
@@ -33,6 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
             link.classList.add('active');
         }
     });
+
 
     // Hamburger button
     const hamburgerBtn = document.getElementById('hamburger-btn');
@@ -66,9 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     });
 
-
     // filter buttons for Project page
-
     const filterBtns = document.querySelectorAll(".filter-btn");
     const items = document.querySelectorAll(".project-item");
 
@@ -92,7 +97,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
         })
     });
+}
 
 
 
-});
+
+
+
